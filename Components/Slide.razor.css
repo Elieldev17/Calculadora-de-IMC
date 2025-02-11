@@ -1,0 +1,20 @@
+﻿.slide{
+    text-align: center;
+    scroll-snap-align: center;
+    flex: none;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.slide:nth-child(even){ /*quando for impar*/
+    background-color: #f6f6f6;
+}
+
+
+.slide:nth-child(odd){ /*quando for par*/
+    background-color: #ffffff;
+}
