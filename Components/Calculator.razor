@@ -5,11 +5,13 @@
     <DataAnnotationsValidator/>
     
     <div class="mb">
-        <InputNumber
+        <InputNumber 
+            @bind-value = "_model.Heigth"
             class="form-input" 
+            type="number" 
             step ="0.01" 
             placeholder = "Altura" 
-            @bind-value = "_model.Heigth"/>
+            />
         
         <span class="form-input-invalid">
             <ValidationMessage For="@(() => _model.Heigth)"/>
@@ -19,6 +21,7 @@
     <div class="mb">
         <InputNumber
             class="form-input"
+            type="number"
             step ="0.1"
             placeholder = "Peso"
             @bind-value = "_model.Weigth"/>
@@ -78,8 +81,5 @@
         AppState.NotifyChanges(_model, null);
         _model = new();
     }
-
-
-
 
 }

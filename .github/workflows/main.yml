@@ -43,11 +43,6 @@ jobs:
       - name: Publish .NET
         run: dotnet publish Imc.csproj -c:Realese -o docs --nologo
 
-      - name: Copy index.html to 404.html
-        run: cp docs/wwwroot/index.html docs/wwwroot/404.html
-
-      - name: Add .nojekyll file
-        run: touch docs/wwwroot/.nojekyll
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
